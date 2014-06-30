@@ -9,5 +9,6 @@
         </Grid.ColumnDefinitions>
         <Button Grid.Column="0" Height="50" Width="50" Name="btnLoadFile" Click="btnLoadFile_Click" HorizontalAlignment="Center">Load</Button>
         <TextBox Grid.Column="0" Width="100" Height="25" Margin="0,100,0,0" HorizontalAlignment="Center" Name="txtReferenceWord"></TextBox>
+        <TextBlock Grid.Column="1" Margin="10" Name="txbWordData"></TextBlock>
     </Grid>
 </Window>

@@ -8,7 +8,7 @@ namespace WordFinder.Core
 {
     public static class WordFinder
     {
-        public static void Search(string loadedFile, string referenceWord)
+        public static int Search(string loadedFile, string referenceWord)
         {
             var text = File.ReadAllText(loadedFile);
 
@@ -18,7 +18,7 @@ namespace WordFinder.Core
                              where word.ToLowerInvariant() == referenceWord.ToLowerInvariant()
                              select word;
 
-            int wordCount = matchQuery.Count();
+            return matchQuery.Count();
         }
     }
 }

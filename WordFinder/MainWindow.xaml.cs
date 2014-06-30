@@ -29,11 +29,18 @@ namespace WordFinder
 
         private void btnLoadFile_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog loadFile = new OpenFileDialog();
+            if (!string.IsNullOrEmpty(txtReferenceWord.Text))
+            {
+                OpenFileDialog loadFile = new OpenFileDialog();
 
-            loadFile.ShowDialog();
+                loadFile.ShowDialog();
 
-            Core.WordFinder.Search(loadFile.FileName, txtReferenceWord.Text);
+                txbWordData.Text = string.Format("Ocurrences Number: {0}", Core.WordFinder.Search(loadFile.FileName, txtReferenceWord.Text));
+            }
+            else
+            {
+                MessageBox.Show("Insert a word to search");
+            }
         }
     }
 }
