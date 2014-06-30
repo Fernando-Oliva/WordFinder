@@ -1,0 +1,13 @@
+﻿<Window x:Class="WordFinder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="0" Height="50" Width="50" Name="btnLoadFile" Click="btnLoadFile_Click" HorizontalAlignment="Center">Load</Button>
+        <TextBox Grid.Column="0" Width="100" Height="25" Margin="0,100,0,0" HorizontalAlignment="Center" Name="txtReferenceWord"></TextBox>
+    </Grid>
+</Window>
